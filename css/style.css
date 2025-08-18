@@ -27,9 +27,23 @@ img {
   display: flex;
   transform: translate3d(0px, 0px, 0px);
 }
+.slide:hover {
+  will-change: transform;
+}
 .slide li {
   width: 80vw;
   flex-shrink: 0;
   max-width: 800px;
   margin: 0 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  opacity: 0.7;
+  transform: scale(0.8);
+  transition: 0.3s;
+}
+
+.slide li.active {
+  transform: scale(1);
+  opacity: 1;
 }
